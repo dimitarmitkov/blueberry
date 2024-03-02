@@ -1,0 +1,3 @@
+This is test project
+
+Before run main.go you need to change user=<please add USERNAME here> with your postgres username also if password is needed please add it as password= ...
