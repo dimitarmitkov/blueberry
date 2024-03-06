@@ -18,8 +18,10 @@ function App() {
   }, []);
 
   const handleInputChange = (event) => {
-    validateText(event.target.value);
+    let isCorrect = validateText(event.target.value);
+    if (isCorrect){
     setNewMessage(event.target.value);
+    }
   };
 
   const handleSubmit = (event) => {
@@ -50,8 +52,9 @@ function App() {
   {
     let tarea = str;
     if (tarea.indexOf("http://") === 0 || tarea.indexOf("https://") === 0) {
-      // do something here
+      return true;
     }
+    return false;
   }
 
   return (
