@@ -18,6 +18,7 @@ function App() {
   }, []);
 
   const handleInputChange = (event) => {
+    validateText(event.target.value);
     setNewMessage(event.target.value);
   };
 
@@ -43,6 +44,14 @@ function App() {
 
   const handleClick = ()=>{
     window.location.reload()
+  }
+
+  const validateText= (str) =>
+  {
+    let tarea = str;
+    if (tarea.indexOf("http://") === 0 || tarea.indexOf("https://") === 0) {
+      // do something here
+    }
   }
 
   return (
